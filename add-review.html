@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavel Krankuš</title>
+    <style>
+      /*Menu start*/
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f3f3f3;
+      }
+
+      .flex-container > div {
+        background-color: #f3f3f3;
+        margin: 1px;
+        text-align: center;
+        font-size: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .flex-container a {
+        display: block;
+        color: #666;
+        text-align: center;
+        padding: 19px 16px;
+        text-decoration: none;
+      }
+
+      .flex-container a:hover:not(.active) {
+        background-color: #ddd;
+      }
+
+      .flex-container a.active {
+        color: white;
+        background-color: #f70c2c;
+      }
+      /*Menu end*/
+
+      .font1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+      }
+
+      body {
+        background-color: white;
+      }
+
+      form {
+        background-color: rgb(190, 190, 190);
+        padding: 15px;
+      }
+
+      input,
+      textarea,
+      label {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: block;
+        margin-top: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 0px;
+      }
+
+      input:focus {
+        background-color: #e7e7e7;
+      }
+
+      .submitButton {
+        background-color: #f1f1f1;
+        color: rgb(75, 75, 75);
+        border: 0px;
+        border-color: black;
+        padding: 3px;
+      }
+      .submitButton:focus {
+        background-color: red;
+        color: white;
+      }
+      div.obrazec {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+      }
+      #o1 {
+        position: absolute;
+        z-index: 1;
+        top: 550px;
+        left: 100px;
+        border: 20px solid #73ad21;
+      }
+      #o2 {
+        position: absolute;
+        z-index: 2;
+        top: 600px;
+        left: 50px;
+        border: 20px solid orange;
+      }
+      #o3 {
+        position: absolute;
+        z-index: 3;
+        top: 600px;
+        left: 100px;
+        border: 20px solid blue;
+      }
+      #o4 {
+        position: absolute;
+        z-index: 4;
+        top: 550px;
+        left: 50px;
+        border: 20px solid red;
+      }
+    </style>
+  </head>
+  <body class="font1">
+    <div class="flex-container">
+      <div><a class="active" href="index.html">Domov</a></div>
+      <div><a href="add-review.html">Pridať recenziu</a></div>
+      <div><a href="chart.html">Rebríček top filmov</a></div>
+    </div>
+
+    <!--Menu-->
+    <script>
+      function úspešneOdolsané() {
+        event.preventDefault();
+        console.log("Prave som klikol button");
+      }
+    </script>
+
+    <!--Formular-->
+    <form>
+      <h1>Formulár</h1>
+      <input
+        placeholder="Názov filmu:"
+        type="text"
+        name="nazov"
+        id="nazov"
+        required
+      />
+      <input
+        placeholder="Meno používateľa:"
+        type="text"
+        name="meno"
+        id="meno"
+      />
+      <input
+        placeholder="Email:"
+        type="email"
+        name="email"
+        id="email"
+        required
+      />
+      <input type="date" name="date" id="date" />
+
+      <label for="hodnotenie">Hodnotenie</label>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        step="10"
+        name="hodnotenie"
+        id="hodnotenie"
+      />
+
+      <input placeholder="Tel. číslo:" type="text" name="tel.c" id="tel.c" />
+
+      <label for="zaner">Žáner:</label>
+
+      <select id="zaner" name="zaner">
+        <option value="komedia">Komédia</option>
+        <option value="drama">Dráma</option>
+        <option value="triler">Triler</option>
+        <option value="horor">Horor</option>
+      </select>
+      <!--Komentar-->
+      <textarea
+        rows="5"
+        placeholder="Komentár"
+        name="koment"
+        id="koment"
+      ></textarea>
+      <!--Tlacitko na odoslanie-->
+      <input
+        onclick="úspešneOdolsané()"
+        class="submitButton"
+        type="submit"
+        value="Odoslať"
+      />
+    </form>
+    <div class="obrazec" id="o4"></div>
+    <div class="obrazec" id="o3"></div>
+    <div class="obrazec" id="o2"></div>
+    <div class="obrazec" id="o1"></div>
+  </body>
+</html>

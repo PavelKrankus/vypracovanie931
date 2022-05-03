@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavel Krankuš</title>
+    <style>
+      /*Menu start*/
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f3f3f3;
+      }
+
+      .flex-container > div {
+        background-color: #f3f3f3;
+        margin: 1px;
+        text-align: center;
+        font-size: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .flex-container a {
+        display: block;
+        color: #666;
+        text-align: center;
+        padding: 19px 16px;
+        text-decoration: none;
+      }
+
+      .flex-container a:hover:not(.active) {
+        background-color: #ddd;
+      }
+
+      .flex-container a.active {
+        color: white;
+        background-color: #f70c2c;
+      }
+      /*Menu end*/
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+      }
+
+      table,
+      th,
+      td {
+        border: 0px solid black;
+      }
+      thead {
+        background-color: red;
+      }
+      .container {
+        width: 580px;
+        height: 0px;
+        text-align: justify;
+      }
+      img {
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      #preTab td,
+      #preTab th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #preTab tr:nth-child(even) {
+        background-color: #c4c4c4;
+      }
+
+      #preTab th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: red;
+        color: white;
+      }
+
+      /* Tooltip Start */
+      .tooltip {
+        position: relative;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: auto;
+        height: auto;
+        background-color: #666;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        top: 3px;
+        left: 32%;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+      .tooltip img {
+        margin: 0;
+      }
+
+      /* Tooltip End */
+    </style>
+  </head>
+
+  <body class="font1">
+    <div class="flex-container">
+      <div><a class="active" href="index.html">Domov</a></div>
+      <div><a href="add-review.html">Pridať recenziu</a></div>
+      <div><a href="chart.html">Rebríček top filmov</a></div>
+    </div>
+
+    <table id="preTab" style="width: 100%">
+      <thead>
+        <tr>
+          <th>Poradie</th>
+          <th>Názov filmu</th>
+          <th>Rok vydania</th>
+          <th>Hodnotenie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: right">1.</td>
+          <td class="tooltip">
+            Vykúpenie z väznice Shawshank
+            <span class="tooltiptext">
+              <img
+                src="https://image.pmgstatic.com/cache/resized/w663/files/images/film/photos/158/463/158463011_1c817f.jpg"
+                alt="Andy Dufresne"
+              />Andy Dufresne
+            </span>
+          </td>
+          <td>1994</td>
+          <td style="color: green">95,3&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">2.</td>
+          <td class="tooltip">
+            Forest Gump
+            <span class="tooltiptext">
+              <img
+                src="https://image.pmgstatic.com/cache/resized/w663/files/images/film/photos/000/172/172177_0d8d31.jpg"
+                alt="Forest Gump"
+              />Forest Gump
+            </span>
+          </td>
+          <td>1994</td>
+          <td style="color: green">94,5&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">3.</td>
+          <td class="tooltip">
+            Zelená míľa
+            <span class="tooltiptext">
+              <img
+                src="https://image.pmgstatic.com/cache/resized/w663/files/images/film/photos/000/176/176435_e63455.jpg"
+                alt="Paul Edgecomb"
+              />Paul Edgecomb
+            </span>
+          </td>
+          <td>1999</td>
+          <td style="color: green">92,9&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">4.</td>
+          <td class="tooltip">
+            Prelet nad kukučím hniezdom
+            <span class="tooltiptext">
+              <img
+                src="https://image.pmgstatic.com/cache/resized/w663/files/images/film/photos/000/166/166070_65fab2.jpg"
+                alt="Randle Patrick McMurphy"
+              />Randle Patrick McMurphy
+            </span>
+          </td>
+          <td>1975</td>
+          <td style="color: green">92,5&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">5.</td>
+          <td class="tooltip">
+            Sedem
+            <span class="tooltiptext">
+              <img
+                src="https://image.pmgstatic.com/cache/resized/w663/files/images/film/photos/000/212/212569_79e943.jpg"
+                alt="Somerset &#38; Mills"
+              />Somerset &#38; Mills
+            </span>
+          </td>
+          <td>1995</td>
+          <td style="color: green">92,4&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">6.</td>
+          <td>Schindlerov zoznam</td>
+          <td>1993</td>
+          <td style="color: green">92,3&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">7.</td>
+          <td>Krstný otec</td>
+          <td>1972</td>
+          <td>91,8&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">8.</td>
+          <td>Dvanásť rozhnevaných mužov</td>
+          <td>1957</td>
+          <td>91,4&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">9.</td>
+          <td>Nedotknuteľní</td>
+          <td>2011</td>
+          <td>91,3&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">10.</td>
+          <td>Pelíšky</td>
+          <td>1999</td>
+          <td>91,2&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">11.</td>
+          <td>Terminátor 2: Deň zúčtovania</td>
+          <td>1991</td>
+          <td>90,9&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">12.</td>
+          <td>Pulp Fiction: Historky z podsvetia</td>
+          <td>1994</td>
+          <td>90,7&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">13.</td>
+          <td>Krstný otec II</td>
+          <td>1974</td>
+          <td>90,8&#37;</td>
+        </tr>
+        <tr>
+          <td style="text-align: right">14.</td>
+          <td>Pán prsteňov: Spoločenstvo Prsteňa</td>
+          <td>2001</td>
+          <td>90,5&#37;</td>
+        </tr>
+        <tr>
+          <td style="text-align: right">15.</td>
+          <td>Pán prsteňov: Návrat kráľa</td>
+          <td>2003</td>
+          <td>90,5&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">16.</td>
+          <td>Mlčanie jahniat</td>
+          <td>1991</td>
+          <td>90,5&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">17.</td>
+          <td>Vtedy na Západe</td>
+          <td>1968</td>
+          <td>90,5&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">18.</td>
+          <td>Temný rytier</td>
+          <td>2008</td>
+          <td>90,3&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">19.</td>
+          <td>Gran Torino</td>
+          <td>2008</td>
+          <td>90,3&#37;</td>
+        </tr>
+
+        <tr>
+          <td style="text-align: right">20.</td>
+          <td>The Matrix</td>
+          <td>1999</td>
+          <td>90,2&#37;</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Top film: Vykúpenie z väznice Shawshank</h1>
+
+    <div class="container">
+      <div class="image">
+        <img
+        src=https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg
+        alt="Vykúpenie z väznice Shawshank" style="float: left">
+      </div>
+      <div>
+        Mladého a úspešného viceprezidenta banky Andyho Dufresnea (Tim Robbins)
+        v roku 1946 odsúdia na doživotie za vraždu svojej manželky a jej
+        milenca. On sám síce tvrdí, že je nevinný, ale nedokáže to na súde
+        preukázať. Dostane sa do väznice Shawshank, kde sú všetci na doživotie.
+        Dočká sa šikanovania, depresií, tvrdej práce, ale postupne sa adaptuje a
+        spriatelí sa s Redom (Morgan Freeman), černošským väzňom, ktorý ako
+        jediný priznáva, že je vinný. Po nejakom čase pomôže Andy jednému
+        dozorcovi vyriešiť problém s daňovým priznaním. A netrvá dlho a stane sa
+        vyhľadávaným daňovým poradcom nielen všetkých dozorcov, ale predovšetkým
+        riaditeľa väznice, pokryteckého a zákerného Nortona (Bob Gunton). S
+        Andyho pomocou rozbehne Norton neuveriteľné finančné machinácie a
+        podnikateľské aktivity, na ktorých fantasticky zarába. Andy sa tak stane
+        prominentným väzňom. Nečakaný obrat nastane vo chvíli, keď jeden z
+        nových väzňov, mladý Tommy, rozpráva Andymu o človeku, s ktorým sedel v
+        inej väznici, a ten sa priznal, že zavraždil Andyho ženu a jej milenca.
+        Andy chce okamžite obnoviť svoj proces, ale narazí na tvrdý odpor
+        riaditeľa Nortona. Ten si nemôže dovoliť o Andyho prísť, ale nielen pre
+        svoje kšefty, ale ja zo strachu, že Andy by mohol na slobode prehovoriť
+        o riaditeľových podvodoch. Andy sa tak znovu ocitne na dne, ale nie je
+        taký hlúpy, ani bezmocný, ako si Norton myslí. Dokáže totiž využiť svoje
+        schopnosti finančného poradcu najmä pre seba, a tak má teraz v rukách
+        kľúč k veľkému majetku. Po celý čas si tiež tajne kope dieru, aby z
+        väznice ušiel...
+      </div>
+    </div>
+  </body>
+</html>
